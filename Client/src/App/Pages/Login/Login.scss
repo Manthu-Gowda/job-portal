@@ -1,0 +1,214 @@
+@import "../../GlobalStyles//variables.scss";
+@import "../../GlobalStyles//mixins.scss";
+
+.login {
+  &_cont {
+    width: 100%;
+    @include FlexJCenter;
+    background-image: url("../../Assets/Images/LoginBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  &_sec {
+    width: 90%;
+    margin-top: 40px;
+    &_header {
+      img {
+        width: fit-content;
+        height: auto;
+      }
+    }
+    &_content {
+      @include FlexAllCenter;
+      height: calc(100vh - 95px);
+      &_box {
+        width: 25%;
+        background-color: rgba(255, 255, 255, 0.25);
+        border-radius: 34px;
+        @include FlexColumnAllCenter;
+        padding: 40px;
+        &_logo {
+          margin-bottom: 30px;
+          img {
+            width: auto;
+            height: autp;
+          }
+        }
+        &_title {
+          h2 {
+            text-align: center;
+            color: $primary_white;
+            font-weight: 700;
+            font-size: 32px;
+            margin-bottom: 30px;
+          }
+          p {
+            text-align: center;
+            color: $primary_white;
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 30px;
+          }
+        }
+        &_data {
+          width: 100%;
+          margin-bottom: 30px;
+          &_inputs {
+            margin-bottom: 30px;
+            .error {
+              font-size: 14px;
+              color: $primary_white;
+              font-weight: 500;
+            }
+          }
+        }
+        &_buttons {
+          width: 100%;
+          .btn {
+            background-color: #fff;
+            border: none !important;
+            &:hover {
+              background-color: $primary_blue;
+              color: $primary_white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  .processing-modal-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .processing-modal-box p {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+  }
+
+@media screen and (min-width: 1250px) and (max-width: 1600px) {
+  .login {
+    &_sec {
+      margin-top: 30px;
+      &_content {
+        &_box {
+          width: 30%;
+          padding: 30px;
+          &_logo {
+            margin-bottom: 20px;
+          }
+          &_title {
+            h2 {
+              font-size: 26px;
+              margin-bottom: 20px;
+            }
+            p {
+              font-size: 16px;
+              margin-bottom: 20px;
+            }
+          }
+          &_data {
+            width: 100%;
+            margin-bottom: 20px;
+            &_inputs {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1090px) and (max-width: 1249px) {
+  .login {
+    &_sec {
+      width: 95%;
+      margin-top: 40px;
+      &_content {
+        @include FlexAllCenter;
+        height: calc(100vh - 95px);
+        &_box {
+          width: 40%;
+          padding: 30px;
+          &_title {
+            h2 {
+              font-size: 26px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1089px) {
+  .login {
+    &_sec {
+      width: 95%;
+      margin-top: 40px;
+      &_content {
+        @include FlexAllCenter;
+        height: calc(100vh - 95px);
+        &_box {
+          width: 50%;
+          padding: 20px;
+          &_title {
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login {
+    &_sec {
+      width: 95%;
+      margin-top: 40px;
+      &_content {
+        @include FlexAllCenter;
+        height: calc(100vh - 95px);
+        &_box {
+          width: 90%;
+          padding: 20px;
+          &_title {
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

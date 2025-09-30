@@ -1,0 +1,32 @@
+.status-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 10px;
+}
+
+.status-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-card-label {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.status-card-count {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.status-card-icon {
+  font-size: 24px;
+  color: #3254d3;
+}

@@ -1,0 +1,45 @@
+@import "../../GlobalStyles/variables.scss";
+@import "../../GlobalStyles/mixins.scss";
+
+.selectinputs {
+  width: 100%;
+  span {
+    color: $secondary_black;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .input-container {
+    margin-top: 5px;
+  }
+  .ant-select {
+    &.ant-select-disabled {
+      background-color: transparent;
+      color: #717171;
+      opacity: 1;
+      cursor: default !important;
+      .ant-select-selector {
+        background-color: #fff;
+        border-color: #d9d9d9;
+        color: #717171;
+      }
+    }
+
+    .ant-select-selector,
+    .ant-select-selection-placeholder,
+    .ant-select-item-option-content {
+      font-weight: 600;
+      color: #717171;
+      font-size: 16px;
+    }
+
+    .ant-select-selection-item {
+      font-weight: 600;
+      color: #717171;
+      font-size: 16px;
+    }
+
+    .ant-select-dropdown .ant-select-item-option-active {
+      background-color: #f5f5f5;
+    }
+  }
+}

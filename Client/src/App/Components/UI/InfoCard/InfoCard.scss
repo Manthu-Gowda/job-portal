@@ -1,0 +1,39 @@
+@import "../../GlobalStyles/variables.scss";
+@import "../../GlobalStyles/variables.scss";
+
+.info_card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    min-width: 160px;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  
+    .info_label {
+      font-size: 14px;
+      font-weight: 500;
+      color: $secondary_grey;
+      margin: 0;
+    }
+  
+    .info_value {
+      font-size: 14px;
+      font-weight: 600;
+      color: $secondary_black;
+      margin: 0;
+    }
+  }
+  
+@media screen and (max-width: 767px) {
+  .info_card {
+    padding: 10px;
+    min-width: 160px;
+    gap: 4px;
+
+  }
+}

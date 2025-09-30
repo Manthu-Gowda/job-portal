@@ -1,0 +1,70 @@
+@import "../../GlobalStyles//variables.scss";
+@import "../../GlobalStyles//mixins.scss";
+
+.custom-button {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 39px !important;
+  gap: 5px;
+  border-radius: 25px;
+  &.primary {
+    background: $primary_blue;
+    color: $primary_white;
+    padding: 0 30px !important;
+    border: none !important;
+  }
+  &.secondary {
+    background: $primary_grey;
+    color: $primary_blue;
+    border: 1px solid $primary_blue;
+    padding: 0 30px !important;
+  }
+  &.small {
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 6px;
+    height: 16px !important;
+    background: $primary_blue;
+    color: $primary_white;
+    padding: 0 4px !important;
+    border: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .custom-button {
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 39px !important;
+    gap: 5px;
+    border-radius: 25px;
+    &.primary {
+      background: $primary_blue;
+      color: $primary_white;
+      padding: 0 20px !important;
+      border: none !important;
+    }
+    &.secondary {
+      background: $primary_grey;
+      color: $primary_blue;
+      border: 1px solid $primary_blue;
+      padding: 0 20px !important;
+    }
+    &.small {
+      font-weight: 500;
+      font-size: 12px;
+      border-radius: 6px;
+      height: 16px !important;
+      background: $primary_blue;
+      color: $primary_white;
+      padding: 0 4px !important;
+      border: none !important;
+    }
+  }
+}

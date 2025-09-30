@@ -23,7 +23,7 @@ const userSchema= new Schema({
         trim:true,
         unique:true,
         match: [
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             'Please fill in a valid email address',
           ],
     },
@@ -43,8 +43,8 @@ const userSchema= new Schema({
     },
     role:{
         type:'String',
-        enum:['USER','ADMIN'],
-        default:'USER'
+        enum:['JOB_SEEKER','JOB_PROVIDER', 'ADMIN'],
+        default:'JOB_SEEKER'
     },
     forgotPasswordToken:String ,
     forgotPasswordExpiry: Date

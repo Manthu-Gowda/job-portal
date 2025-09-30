@@ -1,35 +1,15 @@
-@import "../../GlobalStyles/variables.scss";
-@import "../../GlobalStyles/mixins.scss";
+@use "../../../GlobalStyles" as *;
 
-.forminput {
-  span {
-    color: $secondary_black;
-    font-size: 14px;
-    font-weight: 600;
-  }
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid $third_grey;
+  border-radius: 8px;
+  font-size: 14px;
+  color: $secondary_grey
 
-  .input-container {
-    margin-top: 5px;
-  }
-
-  .ant-input,
-  .ant-input-password input {
-    font-weight: 600;
-    color: #717171;
-    font-size: 16px;
-
-    &::placeholder {
-      font-weight: 600;
-      color: #717171;
-      font-size: 16px;
-    }
-  }
-
-  .ant-input[disabled],
-  .ant-input-password input[disabled] {
-    background-color: #fff; // Adjust as necessary
-    color: #717171; // Maintain the same text color
-    opacity: 1; // Prevent the default opacity for disabled inputs
-    cursor: default !important; // Indicate it's disabled
+  &focus {
+    outline: none;
+    border-color: $primary_blue;
   }
 }

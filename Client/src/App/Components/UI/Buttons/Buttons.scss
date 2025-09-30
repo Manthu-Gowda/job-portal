@@ -1,70 +1,28 @@
-@import "../../GlobalStyles//variables.scss";
-@import "../../GlobalStyles//mixins.scss";
+@use "../../../GlobalStyles" as *;
 
-.custom-button {
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
   font-weight: 600;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 39px !important;
-  gap: 5px;
-  border-radius: 25px;
-  &.primary {
-    background: $primary_blue;
-    color: $primary_white;
-    padding: 0 30px !important;
-    border: none !important;
-  }
-  &.secondary {
-    background: $primary_grey;
-    color: $primary_blue;
-    border: 1px solid $primary_blue;
-    padding: 0 30px !important;
-  }
-  &.small {
-    font-weight: 500;
-    font-size: 12px;
-    border-radius: 6px;
-    height: 16px !important;
-    background: $primary_blue;
-    color: $primary_white;
-    padding: 0 4px !important;
-    border: none !important;
-  }
-}
 
-@media screen and (max-width: 767px) {
-  .custom-button {
-    font-weight: 600;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 39px !important;
-    gap: 5px;
-    border-radius: 25px;
-    &.primary {
-      background: $primary_blue;
-      color: $primary_white;
-      padding: 0 20px !important;
-      border: none !important;
+  &.btn-primary {
+    background-color: $primary_blue;
+    color: $primary_white;
+
+    &:hover {
+      background-color: darken($primary_blue, 10%);
     }
-    &.secondary {
-      background: $primary_grey;
-      color: $primary_blue;
-      border: 1px solid $primary_blue;
-      padding: 0 20px !important;
-    }
-    &.small {
-      font-weight: 500;
-      font-size: 12px;
-      border-radius: 6px;
-      height: 16px !important;
-      background: $primary_blue;
-      color: $primary_white;
-      padding: 0 4px !important;
-      border: none !important;
+  }
+
+  &.btn-secondary {
+    background-color: $primary_grey;
+    color: $primary_white;
+
+    &:hover {
+      background-color: darken($primary_grey, 10%);
     }
   }
 }

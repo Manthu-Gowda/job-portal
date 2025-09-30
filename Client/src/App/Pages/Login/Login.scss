@@ -1,210 +1,88 @@
-@import "../../GlobalStyles//variables.scss";
-@import "../../GlobalStyles//mixins.scss";
+@use "../../GlobalStyles" as *;
 
 .login {
+  background-image: url("../../Assets/Images/LoginBg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &_cont {
-    width: 100%;
-    @include FlexJCenter;
-    background-image: url("../../Assets/Images/LoginBg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  &_sec {
-    width: 90%;
-    margin-top: 40px;
-    &_header {
-      img {
-        width: fit-content;
-        height: auto;
-      }
-    }
-    &_content {
-      @include FlexAllCenter;
-      height: calc(100vh - 95px);
-      &_box {
-        width: 25%;
-        background-color: rgba(255, 255, 255, 0.25);
-        border-radius: 34px;
-        @include FlexColumnAllCenter;
-        padding: 40px;
-        &_logo {
-          margin-bottom: 30px;
-          img {
-            width: auto;
-            height: autp;
-          }
-        }
-        &_title {
-          h2 {
-            text-align: center;
-            color: $primary_white;
-            font-weight: 700;
-            font-size: 32px;
-            margin-bottom: 30px;
-          }
-          p {
-            text-align: center;
-            color: $primary_white;
-            font-weight: 500;
-            font-size: 20px;
-            margin-bottom: 30px;
-          }
-        }
-        &_data {
-          width: 100%;
-          margin-bottom: 30px;
-          &_inputs {
-            margin-bottom: 30px;
-            .error {
-              font-size: 14px;
-              color: $primary_white;
-              font-weight: 500;
-            }
-          }
-        }
-        &_buttons {
-          width: 100%;
-          .btn {
-            background-color: #fff;
-            border: none !important;
-            &:hover {
-              background-color: $primary_blue;
-              color: $primary_white;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-  .processing-modal-overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid #ccc;
-    padding: 16px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    width: 60%;
+    margin: 0 auto;
 
-  .processing-modal-box p {
-    margin-top: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    font-weight: 600;
-  }
-
-@media screen and (min-width: 1250px) and (max-width: 1600px) {
-  .login {
     &_sec {
-      margin-top: 30px;
+      background-color: $primary_white;
+      border-radius: 24px;
+      padding: 2rem;
+      width: 100%;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+      &_header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        img {
+          width: 200px;
+        }
+      }
+
       &_content {
         &_box {
-          width: 30%;
-          padding: 30px;
           &_logo {
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            img {
+              width: 80px;
+            }
           }
+
           &_title {
+            text-align: center;
+            margin-bottom: 2rem;
+
             h2 {
-              font-size: 26px;
-              margin-bottom: 20px;
+              font-size: $font_xl;
+              font-weight: 600;
+              color: $primary_blue;
             }
+
             p {
-              font-size: 16px;
-              margin-bottom: 20px;
+              font-size: 14px;
+              color: $secondary_grey
             }
           }
+
           &_data {
-            width: 100%;
-            margin-bottom: 20px;
             &_inputs {
-              margin-bottom: 20px;
+              margin-bottom: 1.5rem;
+
+              .error {
+                color: red;
+                font-size: $font_s;
+              }
             }
           }
-        }
-      }
-    }
-  }
-}
 
-@media screen and (min-width: 1090px) and (max-width: 1249px) {
-  .login {
-    &_sec {
-      width: 95%;
-      margin-top: 40px;
-      &_content {
-        @include FlexAllCenter;
-        height: calc(100vh - 95px);
-        &_box {
-          width: 40%;
-          padding: 30px;
-          &_title {
-            h2 {
-              font-size: 26px;
-            }
-            p {
-              font-size: 16px;
-            }
+          &_buttons {
+            margin-top: 2rem;
           }
-        }
-      }
-    }
-  }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1089px) {
-  .login {
-    &_sec {
-      width: 95%;
-      margin-top: 40px;
-      &_content {
-        @include FlexAllCenter;
-        height: calc(100vh - 95px);
-        &_box {
-          width: 50%;
-          padding: 20px;
-          &_title {
-            h2 {
-              font-size: 24px;
-            }
-            p {
-              font-size: 16px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
+          &_signup-link {
+            margin-top: 1rem;
+            text-align: center;
 
-@media screen and (max-width: 767px) {
-  .login {
-    &_sec {
-      width: 95%;
-      margin-top: 40px;
-      &_content {
-        @include FlexAllCenter;
-        height: calc(100vh - 95px);
-        &_box {
-          width: 90%;
-          padding: 20px;
-          &_title {
-            h2 {
-              font-size: 24px;
-            }
             p {
-              font-size: 16px;
+              font-size: 14px;
+              color: $secondary_grey
+
+              a {
+                color: $primary_blue;
+                text-decoration: none;
+              }
             }
           }
         }

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import "./Login.scss";
 import MainLogo from "../../Assets/Images/MainLogo.png";
 import SmallLogo from "../../Assets/Images/EmergentLogo.png";
-import Loader from "../../Components/Loader/Loader";
 import { useNavigate } from "react-router-dom";
 import { SERVER_STATUS_CHECK, USER_LOGIN } from "../../Utils/apiPath";
 import { postApi } from "../../Utils/apiService";
 import { errorToast, successToast } from "../../Services/ToastHelper";
 import FormInputs from "../../Components/UI/FormInputs/FormInputs";
 import Buttons from "../../Components/UI/Buttons/Buttons";
+import { Link } from "react-router-dom";
+import Loader from "../../Components/UI/Loader/Loader";
 
 const initialValues = {
   userName: "",
@@ -21,10 +22,10 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    sessionStorage.clear();
-    fetchServerStatusCheck();
-  }, []);
+  // useEffect(() => {
+  //   sessionStorage.clear();
+  //   fetchServerStatusCheck();
+  // }, []);
 
   const fetchServerStatusCheck = async () => {
     const { statusCode, message } = await postApi(SERVER_STATUS_CHECK);
@@ -161,6 +162,9 @@ const Login = () => {
                 >
                   Login
                 </Buttons>
+              </div>
+              <div className="login_sec_content_box_signup-link">
+                <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
               </div>
             </div>
           </div>

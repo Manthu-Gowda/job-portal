@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 import LayoutCustom from "../Components/LayoutCustom/LayoutCustom";
 import ProtectedRoute from "./ProtectedRoute";
 import Maintenance from "../Pages/Maintenance/Maintenance";
@@ -24,6 +25,7 @@ const RouterComponent = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/*" element={<AppRoutes />} />
         <Route path="/maintenance" element={<Maintenance />} />
       </Routes>

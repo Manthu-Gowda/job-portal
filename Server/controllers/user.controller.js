@@ -20,7 +20,7 @@ const cookieOptions = {
  */
 export const register = asyncHandler(async (req, res, next) => {
 
-    const { fullName, email, password } = req.body;
+    const { fullName, email, password, role } = req.body;
 
 
     if (!fullName || !email || !password) {
@@ -40,6 +40,7 @@ export const register = asyncHandler(async (req, res, next) => {
         fullName,
         email,
         password,
+        role: role || 'JOB_SEEKER',
         avatar: {
             public_id: email,
             secure_url: 'https://res.cloudinary.com/du9jzqlpt/image/upload/v1674647316/avatar_drzgxv.jpg'

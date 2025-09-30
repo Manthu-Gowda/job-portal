@@ -1,0 +1,10 @@
+@use "../../GlobalStyles" as *;
+
+.layout-custom {
+  background-color: $primary_grey;
+  min-height: 100vh;
+
+  .main-content {
+    padding: 1rem;
+  }
+}

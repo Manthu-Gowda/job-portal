@@ -1,0 +1,21 @@
+@use "../../GlobalStyles" as *;
+
+.maintenance {
+  // @include flex(center, center, column);
+  height: 100vh;
+  background-color: $primary_grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: $font_xxl;
+    color: $primary_blue;
+  }
+
+  p {
+    font-size: $font_l;
+    color: $secondary_grey
+  }
+}

@@ -10,7 +10,8 @@ import errorMiddlware from './middlewares/error.middleware.js';
 import miscRoutes from './routes/miscellaneous.routes.js'
 import userRoutes from './routes/user.routes.js'
 import adminRoutes from './routes/admin.routes.js';
-import jobRoutes from './routes/job.routes.js'; // Added for job-related routes
+import jobSeekerRoutes from './routes/jobSeeker.routes.js';
+import jobProviderRoutes from './routes/jobProvider.routes.js';
 
 config();
 
@@ -46,7 +47,8 @@ app.use('/ping',function(_req,res){
 // Setting up routes
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/admin', adminRoutes);
-app.use('/api/v1/jobs', jobRoutes); // Added for job-related routes
+app.use('/api/v1/job-seeker', jobSeekerRoutes);
+app.use('/api/v1/job-provider', jobProviderRoutes);
 app.use('/api/v1', miscRoutes);
 
 // Serve static files from the frontend build directory

@@ -5,6 +5,9 @@ import SignUp from "../Pages/SignUp/SignUp";
 import LayoutCustom from "../Components/LayoutCustom/LayoutCustom";
 import ProtectedRoute from "./ProtectedRoute";
 import Maintenance from "../Pages/Maintenance/Maintenance";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import JobSearch from "../Pages/JobSearch/JobSearch";
+import JobSeekerProfile from "../Pages/Profile/JobSeekerProfile";
 
 const AppRoutes = () => (
   <Routes>
@@ -15,7 +18,10 @@ const AppRoutes = () => (
         </ProtectedRoute>
       }
     >
-      {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/jobs/search" element={<JobSearch />} />
+      <Route path="/profile" element={<JobSeekerProfile />} />
+      <Route path="/applications" element={<div>Applications Page - Coming Soon</div>} />
     </Route>
   </Routes>
 );
